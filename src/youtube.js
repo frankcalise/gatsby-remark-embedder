@@ -25,9 +25,7 @@ export const getYouTubeIFrameSrc = string => {
   if (url.host === 'youtu.be') {
     id = url.pathname.slice(1);
   }
-  const embedUrl = new URL(
-    `hhttps://www.youtube.com/embed/${id}`
-  );
+  const embedUrl = new URL(`https://www.youtube.com/embed/${id}`);
   url.searchParams.forEach((value, name) => {
     if (name === 'v') {
       return;
