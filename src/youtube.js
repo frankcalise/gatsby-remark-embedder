@@ -26,7 +26,7 @@ export const getYouTubeIFrameSrc = string => {
     id = url.pathname.slice(1);
   }
   const embedUrl = new URL(
-    `https://www.youtube-nocookie.com/embed/${id}?rel=0`
+    `hhttps://www.youtube.com/embed/${id}`
   );
   url.searchParams.forEach((value, name) => {
     if (name === 'v') {
@@ -45,5 +45,5 @@ export const getYouTubeIFrameSrc = string => {
 export const getHTML = string => {
   const iframeSrc = getYouTubeIFrameSrc(string);
 
-  return `<iframe width="100%" height="315" src="${iframeSrc}" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`;
+  return `<iframe width="100%" height="400" src="${iframeSrc}" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`;
 };
